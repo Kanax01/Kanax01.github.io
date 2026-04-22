@@ -8,3 +8,32 @@ document.querySelectorAll('nav a').forEach(anchor => {
         });
     });
 });
+
+// Fetch GitHub stats on page load
+async function fetchGitHubStats() {
+    try {
+        // Fetch user data from GitHub API
+        const userResponse = await fetch('https://api.github.com/users/Kanax01');
+        const userData = await userResponse.json();
+        
+        // Update followers and public repositories
+        if (document.getElementById('followers')) {
+            document.getElementById('followers').textContent = userData.followers;
+        }
+        if (document.getElementById('repos')) {
+            document.getElementById('repos').textContent = userData.public_repos;
+        }
+        
+        // Note: For accurate contribution count, you may want to manually update it
+        // as the GitHub API doesn't provide a direct contributions endpoint for public access
+        // The stat card will keep the fallback value (357) unless you want to update it manually
+        // You can check your contributions at https://github.com/Kanax01/
+        
+    } catch (error) {
+        console.error('Error fetching GitHub stats:', error);
+        // Keep the fallback values if API fails
+    }
+}
+
+// Load stats when page loads
+window.addEventListener('load', fetchGitHubStats);

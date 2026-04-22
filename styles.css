@@ -117,6 +117,18 @@ h2 {
     font-weight: 600;
 }
 
+/* Center h2 in specific sections */
+#about h2,
+#skills h2,
+#portfolio h2,
+#projects h2,
+#tech h2,
+#stats h2,
+#languages h2,
+#activity h2 {
+    text-align: center;
+}
+
 p {
     margin-bottom: 1rem;
     color: #b0b0b0;
@@ -253,4 +265,169 @@ footer {
 .btn:hover {
     background-color: #00b894;
     transform: translateY(-2px);
+}
+
+/* Recent Projects Section */
+.projects-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.project-item {
+    background-color: #2c2c2c;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+    border-left: 4px solid #00d4aa;
+}
+
+.project-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+}
+
+.project-item h3 {
+    color: #00d4aa;
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+}
+
+.tech-tag {
+    display: inline-block;
+    background-color: #00d4aa;
+    color: #000000 !important;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 0.8rem;
+}
+
+.project-item p {
+    color: #b0b0b0;
+    margin-bottom: 1rem;
+}
+
+.project-link {
+    color: #00d4aa;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.project-link:hover {
+    color: #00b894;
+}
+
+/* Tech Stack Section */
+.tech-stack {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.tech-category h3 {
+    color: #00d4aa;
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.skill-icons {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+/* Stats Section */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.stat-card {
+    background-color: #2c2c2c;
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #00d4aa;
+    margin-bottom: 0.5rem;
+}
+
+.stat-label {
+    color: #b0b0b0;
+    font-size: 0.95rem;
+}
+
+/* Languages Section */
+.languages-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.language-card {
+    background-color: #2c2c2c;
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    transition: transform 0.3s;
+}
+
+.language-card:hover {
+    transform: translateY(-3px);
+}
+
+.language-card h3 {
+    color: #00d4aa;
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.fluency {
+    color: #e0e0e0;
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+}
+
+.note {
+    color: #b0b0b0;
+    font-size: 0.9rem;
+    font-style: italic;
+}
+
+/* GitHub Activity Section */
+.github-stats {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    justify-items: center;
+}
+
+.activity-graph {
+    max-width: 100%;
+    width: 100%;
+    border-radius: 8px;
+    grid-column: 1 / -1;
+}
+
+.github-card {
+    max-width: 100%;
+    width: 100%;
+    border-radius: 8px;
 }
