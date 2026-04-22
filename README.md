@@ -1,2 +1,7 @@
+<div align="center">
+
 # Kanax01.github.io
-My web site
+
+</div>
+
+### - My web site
