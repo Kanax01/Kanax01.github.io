@@ -201,17 +201,137 @@ footer {
 /* Responsive */
 @media (max-width: 768px) {
     header {
-        flex-direction: column;
-        text-align: center;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0.8rem 1rem;
     }
+    
+    .logo {
+        left: 1rem;
+        font-size: 1.4rem;
+    }
+    
     nav {
-        margin: 1rem 0;
+        display: flex !important;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.5rem;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #1e1e1e;
+        padding: 0.5rem;
+        border-top: 1px solid #2c2c2c;
+        width: 100%;
     }
+    
+    nav a {
+        font-size: 0.85rem;
+        padding: 0.3rem 0.6rem;
+    }
+    
+    .github-link {
+        right: 1rem;
+        font-size: 1.2rem;
+    }
+    
+    main {
+        margin-top: 120px;
+    }
+    
     h1 {
         font-size: 2rem;
     }
+    
+    h2 {
+        font-size: 1.5rem;
+    }
+    
+    section {
+        padding: 2rem 1rem;
+        margin: 1rem auto;
+    }
+    
+    #hero {
+        padding: 3rem 1rem;
+    }
+    
+    .avatar {
+        width: 120px;
+        height: 120px;
+    }
+    
     .skills-grid, .portfolio-grid {
         grid-template-columns: 1fr;
+    }
+    
+    .github-stats {
+        grid-template-columns: 1fr;
+    }
+    
+    .activity-graph, .github-card {
+        max-width: 100%;
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 0.6rem 0.8rem;
+    }
+    
+    .logo {
+        left: 0.8rem;
+        font-size: 1.1rem;
+    }
+    
+    .github-link {
+        right: 0.8rem;
+        font-size: 1rem;
+    }
+    
+    nav {
+        padding: 0.3rem 0.5rem;
+    }
+    
+    nav a {
+        font-size: 0.75rem;
+        padding: 0.25rem 0.4rem;
+    }
+    
+    main {
+        margin-top: 110px;
+    }
+    
+    section {
+        padding: 1.5rem 0.8rem;
+        margin: 0.8rem auto;
+    }
+    
+    h1 {
+        font-size: 1.5rem;
+    }
+    
+    h2 {
+        font-size: 1.2rem;
+    }
+    
+    #hero {
+        padding: 2rem 0.8rem;
+    }
+    
+    .avatar {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .stat-card, .language-card, .skill-card, .project-card {
+        padding: 1rem;
+    }
+    
+    .stat-number {
+        font-size: 2rem;
     }
 }
 
@@ -414,9 +534,16 @@ footer {
 .github-stats {
     margin-top: 2rem;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
     justify-items: center;
+}
+
+@media (max-width: 640px) {
+    .github-stats {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
 }
 
 .activity-graph {
