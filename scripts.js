@@ -24,11 +24,6 @@ async function fetchGitHubStats() {
             document.getElementById('repos').textContent = userData.public_repos;
         }
         
-        // Note: For accurate contribution count, you may want to manually update it
-        // as the GitHub API doesn't provide a direct contributions endpoint for public access
-        // The stat card will keep the fallback value (357) unless you want to update it manually
-        // You can check your contributions at https://github.com/Kanax01/
-        
     } catch (error) {
         console.error('Error fetching GitHub stats:', error);
         // Keep the fallback values if API fails
